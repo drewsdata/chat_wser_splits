@@ -20,6 +20,8 @@ wser_results <- read_csv(here("/home/drew/projects/r/querychat_wser_splits/data/
     )
   )
 
+GOOGLE_API_KEY <- Sys.getenv("GOOGLE_API_KEY")
+
 # 1. Configure querychat. This is where you specify the dataset and can also
 #    override options like the greeting message, system prompt, model, etc.
 # querychat_config <- querychat_init(mtcars,
