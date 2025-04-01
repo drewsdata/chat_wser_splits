@@ -1550,7 +1550,7 @@
         "RemoteHost": "api.github.com",
         "RemoteRepo": "querychat",
         "RemoteUsername": "posit-dev",
-        "RemotePkgRef": "posit-dev/querychat",
+        "RemotePkgRef": "posit-dev/querychat/tree/main/r-package",
         "RemoteRef": "HEAD",
         "RemoteSha": "8767d48b5c6c1e46dd99381594b970c9da7e8fbc",
         "RemoteSubdir": "r-package",
