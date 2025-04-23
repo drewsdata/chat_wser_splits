@@ -45,7 +45,7 @@ convert_duration_columns <- function(df) {
   return(df)
 }
 
-wser_results <- read_csv(here("/home/drew/projects/r/chat_wser_splits/data/wser_split_data_2017_2024.csv")) %>% 
+wser_results <- read_csv(here("data","wser_split_data_2017_2024.csv")) %>% 
   mutate(
     time = case_when(
       time == "dnf" ~ "DNF",
