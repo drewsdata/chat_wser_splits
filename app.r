@@ -4,13 +4,53 @@ library(dplyr)
 library(shiny)
 library(bslib)
 library(querychat)
+library(stringr)
 
-wser_results <- read_csv(here("/home/drew/projects/r/querychat_wser_splits/data/wser_split_data_2017_2024.csv")) %>% 
+# Function to convert duration-style time columns
+convert_duration_columns <- function(df) {
+  # Get column names that end with "_time"
+  time_cols <- names(df)[str_detect(names(df), "_time$")]
+  
+  # Loop through each time column and apply the conversion
+  for (col in time_cols) {
+    df <- df %>% 
+      mutate(across(
+        all_of(col),
+        ~{
+          # Split the time string by colon
+          parts <- str_split(., ":", simplify = TRUE)
+          
+          # Convert to numeric and calculate total seconds
+          if(ncol(parts) == 3) {
+            hours <- as.numeric(parts[,1])
+            minutes <- as.numeric(parts[,2])
+            seconds <- as.numeric(parts[,3])
+          } else if(ncol(parts) == 2) {
+            hours <- as.numeric(parts[,1])
+            minutes <- as.numeric(parts[,2])
+            seconds <- 0
+          } else {
+            hours <- as.numeric(.)
+            minutes <- 0
+            seconds <- 0
+          }
+          
+          # Format with potentially more than 24 hours
+          sprintf("%d:%02d:%02d", hours, minutes, seconds)
+        },
+        .names = "{.col}"
+      ))
+  }
+  
+  return(df)
+}
+
+wser_results <- read_csv(here("/home/drew/projects/r/chat_wser_splits/data/wser_split_data_2017_2024.csv")) %>% 
   mutate(
     time = case_when(
-    time == "dnf" ~ "DNF",
-    TRUE ~ time
-  )) %>% 
+      time == "dnf" ~ "DNF",
+      TRUE ~ time
+    )) %>% 
   mutate(
     buckle_type = case_when(
       time < "24:00:00" ~ "silver",
@@ -18,7 +58,16 @@ wser_results <- read_csv(here("/home/drew/projects/r/querychat_wser_splits/data/
       time == "DNF" ~ "no buckle",
       TRUE ~ "no buckle"
     )
-  )
+  ) 
+
+wser_results <- convert_duration_columns(wser_results) 
+
+# replace NA:NA:NA string times
+wser_results <- wser_results %>%
+  mutate(across(ends_with("_time"), function(x) {
+    x[x == "NA:NA:NA"] <- NA
+    return(x)
+  }))
 
 GOOGLE_API_KEY <- Sys.getenv("GOOGLE_API_KEY")
 
