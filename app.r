@@ -75,6 +75,7 @@ GOOGLE_API_KEY <- Sys.getenv("GOOGLE_API_KEY")
 #    override options like the greeting message, system prompt, model, etc.
 # querychat_config <- querychat_init(mtcars,
 querychat_config <- querychat_init(wser_results,
+                                   data_description = readLines("data_description.md"),
                                    create_chat_func = purrr::partial(ellmer::chat_gemini, model = "gemini-2.0-flash"))
 
 ui <- page_sidebar(
