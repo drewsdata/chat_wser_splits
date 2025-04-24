@@ -75,6 +75,7 @@ GOOGLE_API_KEY <- Sys.getenv("GOOGLE_API_KEY")
 #    override options like the greeting message, system prompt, model, etc.
 # querychat_config <- querychat_init(mtcars,
 querychat_config <- querychat_init(wser_results,
+                                   greeting = readLines("greeting.md"),
                                    data_description = readLines("data_description.md"),
                                    create_chat_func = purrr::partial(ellmer::chat_gemini, model = "gemini-2.0-flash"))
 
@@ -82,7 +83,7 @@ ui <- page_sidebar(
   # 2. Use querychat_sidebar(id) in a bslib::page_sidebar.
   #    Alternatively, use querychat_ui(id) elsewhere if you don't want your
   #    chat interface to live in a sidebar.
-  sidebar = querychat_sidebar("chat"),
+  sidebar = querychat_sidebar("chat", width = "40%"),
   DT::DTOutput("dt")
 )
 

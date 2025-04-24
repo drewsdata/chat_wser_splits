@@ -6,7 +6,7 @@
     "appmode": "shiny",
     "primary_rmd": null,
     "primary_html": null,
-    "content_category": "site",
+    "content_category": null,
     "has_parameters": false
   },
   "packages": {
@@ -2258,13 +2258,19 @@
   },
   "files": {
     "app.r": {
-      "checksum": "f018dbccb7ebf4e5e0d7981eb0d07ec7"
+      "checksum": "a8b44aeaee7b3ab387456b46288ad9a3"
     },
     "data_description.md": {
-      "checksum": "b883b0906514faa2564a4cd9b0a6efd3"
+      "checksum": "f9e7ed8b21d31e9bbb79903246bdf78d"
     },
     "data/wser_split_data_2017_2024.csv": {
       "checksum": "609d3e8fc7e87771c651cbe04c4a7f44"
+    },
+    "greeting.html": {
+      "checksum": "e53820ac042e495e4d056884dd5cbe5e"
+    },
+    "greeting.md": {
+      "checksum": "7a566b9012d7cce5313ee8622d545db1"
     },
     "LICENSE": {
       "checksum": "aa5661f2ee3952399746c99fa08d8ccc"
