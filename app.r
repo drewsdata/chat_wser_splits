@@ -78,6 +78,15 @@ querychat_config <- querychat_init(wser_results,
 
 ui <- fluidPage(
   h1("Chat with WSER Data", align = "center"),
+  h5(
+    "The data is sourced from ",
+    tags$a("here", href = "https://www.wser.org/splits/", target = "_blank", rel = "noopener noreferrer"),
+    " and relies on the work of many time keeping volunteers at WSER checkpoints. This dashboard is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license and can be accredited to \"Drew Coughlin\" using this ",
+    tags$a("URL", href = "https://drewsdata.github.io/", target = "_blank", rel = "noopener noreferrer"),
+    ".",
+    align = "left"
+  ),
+  
   tags$hr(style="border-color: #4682B4;"),
   
   tabPanel("Results",
