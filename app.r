@@ -79,9 +79,9 @@ querychat_config <- querychat_init(wser_results,
 ui <- fluidPage(
   h1("Chat with Western States Endurance Run (WSER) Data", align = "center"),
   h5(
-    "The data is sourced from ",
+    "Underlying data is sourced from ",
     tags$a("here", href = "https://www.wser.org/splits/", target = "_blank", rel = "noopener noreferrer"),
-    " and relies on the work of many time keeping volunteers at WSER checkpoints. This dashboard relies on the remarkable open source work of the ", tags$a("Posit PBC organization", href = "https://posit.co/",target = "_blank", rel = "noopener noreferrer")," and is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It can be accredited to \"Drew Coughlin\" using this ",
+    " and relies on the work of many time keeping volunteers at WSER checkpoints. This dashboard leverages the remarkable open source work of the ", tags$a("Posit PBC organization", href = "https://posit.co/",target = "_blank", rel = "noopener noreferrer")," and is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It can be accredited to \"Drew Coughlin\" using this ",
     tags$a("URL", href = "https://drewsdata.github.io/", target = "_blank", rel = "noopener noreferrer"),
     ".",
     align = "left"

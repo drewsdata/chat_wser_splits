@@ -10,4 +10,4 @@ Questions:<br>
 * How many runners did not finish the race in 2023?<br>
 * What is the mean average time difference between the men and women in each year?
 ___
-Remember, you are interacting with a large language model so some experimentation and patience while the model is processing data may be required.
+Remember, you are interacting with a large language model so some experimentation and patience is required while the model processes data.
