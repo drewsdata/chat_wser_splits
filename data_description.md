@@ -3,9 +3,13 @@ Columns with the word "time" are in a format of hours:minutes:seconds. Those val
 To convert column values when doing computations on those columns, you can use a SQL command such as this example:
 SELECT AVG(CAST(SUBSTR(finish_time, 1, 2) AS INTEGER) * 3600 + CAST(SUBSTR(finish_time, 4, 2) AS INTEGER) * 60 + CAST(SUBSTR(finish_time, 7, 2) AS INTEGER)) AS avg_finish_time_seconds FROM wser_results WHERE year = 2019 AND finish_time NOT LIKE 'DNF'
 
+Convert all your final answers from total seconds to hours, minutes and seconds.
+
 Convert all time calculation results from seconds to hours, minutes and seconds. For example, if your answer to a question is "10616 seconds" you need to conver that to "2:56:56" or "2 hours, 56 minutes and 56 seconds"
 
 Always display time calculation results in hours, minutes and seconds format.
+
+Do not display your thinking.
 
 Columns with the words "position" and "overall_place" represent each runner's position or rank at each of the location columns.  For example, if the runner has a value of "16" at the "robinson_flat_position" then they are in 16th place overall in the race at that position.  If a runner has a value of "2" in the "overall_place" column then they finished the race in second place.
 

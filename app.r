@@ -71,30 +71,30 @@ wser_results <- wser_results %>%
 
 GOOGLE_API_KEY <- Sys.getenv("GOOGLE_API_KEY")
 
-# 1. Configure querychat. This is where you specify the dataset and can also
-#    override options like the greeting message, system prompt, model, etc.
-# querychat_config <- querychat_init(mtcars,
 querychat_config <- querychat_init(wser_results,
                                    greeting = readLines("greeting.md"),
                                    data_description = readLines("data_description.md"),
-                                   create_chat_func = purrr::partial(ellmer::chat_gemini, model = "gemini-2.0-flash"))
+                                   create_chat_func = purrr::partial(ellmer::chat_gemini, model = "gemini-2.5-flash-preview-04-17"))
 
-ui <- page_sidebar(
-  # 2. Use querychat_sidebar(id) in a bslib::page_sidebar.
-  #    Alternatively, use querychat_ui(id) elsewhere if you don't want your
-  #    chat interface to live in a sidebar.
-  sidebar = querychat_sidebar("chat", width = "40%"),
-  DT::DTOutput("dt")
-)
+ui <- fluidPage(
+  h1("Chat with WSER Data", align = "center"),
+  tags$hr(style="border-color: #4682B4;"),
+  
+  tabPanel("Results",
+           sidebarLayout(
+             sidebarPanel(
+               querychat_ui("chat")
+               ),
+             mainPanel(
+               DT::DTOutput("dt")
+               )
+             )
+           )
+  )
 
 server <- function(input, output, session) {
-  
-  # 3. Create a querychat object using the config from step 1.
   querychat <- querychat_server("chat", querychat_config)
-  
   output$dt <- DT::renderDT({
-    # 4. Use the filtered/sorted data frame anywhere you wish, via the 
-    #    querychat$df() reactive.
     DT::datatable(querychat$df())
   })
 }

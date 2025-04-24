@@ -6,7 +6,7 @@
     "appmode": "shiny",
     "primary_rmd": null,
     "primary_html": null,
-    "content_category": null,
+    "content_category": "site",
     "has_parameters": false
   },
   "packages": {
@@ -2257,20 +2257,23 @@
     }
   },
   "files": {
+    "app_old.r": {
+      "checksum": "2bbf25f8441eee3171512bc45844bacd"
+    },
     "app.r": {
-      "checksum": "a8b44aeaee7b3ab387456b46288ad9a3"
+      "checksum": "2ca48eac77c0698b81a1148dbcf69f9f"
     },
     "data_description.md": {
-      "checksum": "f9e7ed8b21d31e9bbb79903246bdf78d"
+      "checksum": "3904976f31b0c36c2a80796af100608b"
     },
     "data/wser_split_data_2017_2024.csv": {
       "checksum": "609d3e8fc7e87771c651cbe04c4a7f44"
     },
     "greeting.html": {
-      "checksum": "e53820ac042e495e4d056884dd5cbe5e"
+      "checksum": "03b4e6f7c1df813e82cf23551e31eed3"
     },
     "greeting.md": {
-      "checksum": "7a566b9012d7cce5313ee8622d545db1"
+      "checksum": "e4baba0f06a7b21b800b451423897bab"
     },
     "LICENSE": {
       "checksum": "aa5661f2ee3952399746c99fa08d8ccc"

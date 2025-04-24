@@ -2,10 +2,12 @@ Hello and welcome to the Western States Exploration run data set.  This data cur
 <br>
 <br>
 Filtering and sorting:<br>
-Show all the runners from California.<br>
-List the runners in order of finish time.<br>
-<br>
+* Show all the runners from California.<br>
+* List the runners in order of finish time.
+___
 Questions:<br>
-What was the average age of the runners?<br>
-How many runners did not finish the race in 2023?<br>
-What is the average time difference between the winning men and women in each year?
+* What was the average age of the runners?<br>
+* How many runners did not finish the race in 2023?<br>
+* What is the mean average time difference between the men and women in each year?
+___
+Remember, you are interacting with a large language model so some experimentation and patience while the model is processing data may be required.
