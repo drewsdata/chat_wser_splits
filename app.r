@@ -94,12 +94,13 @@ ui <- fluidPage(
              sidebarPanel(
                querychat_ui("chat")
                ),
+
              mainPanel(
                DT::DTOutput("dt")
                )
              )
            )
-  )
+)
 
 server <- function(input, output, session) {
   querychat <- querychat_server("chat", querychat_config)
