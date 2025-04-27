@@ -18,3 +18,5 @@ The value "DNF" or "dnf" in the "time" column means that the runner did not succ
 The race starts at "olympic_valley".  All "olympic_valley_time" values represent the start so they are in the format of "0:00:00" and all runners have the same position value of "1" at the start "olympic_valley_position".
 
 Consider all text values to be case insensitive.  Force lower case on any text columns if necessary to compare values in those columns.
+
+If the "finish_time" column is null then the runner did not finish the race. This is the same as a DNF in the "time" column and "no buckle" in the "buckle type" column
