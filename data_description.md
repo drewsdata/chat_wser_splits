@@ -19,4 +19,6 @@ The race starts at "olympic_valley".  All "olympic_valley_time" values represent
 
 Consider all text values to be case insensitive.  Force lower case on any text columns if necessary to compare values in those columns.
 
+If the "finish_time" column is 30:00:00 or greater then the runner did not officially finish the race. This is the same as a DNF in the "time" column and "no buckle" in the "buckle type" column
+
 If the "finish_time" column is null then the runner did not finish the race. This is the same as a DNF in the "time" column and "no buckle" in the "buckle type" column
