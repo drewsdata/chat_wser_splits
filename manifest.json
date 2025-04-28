@@ -611,13 +611,13 @@
         "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2024-10-22 04:12:18 UTC; unix"
       }
     },
-    "duckdb": {
-      "Source": "github",
-      "Repository": null,
+"duckdb": {
+      "Source": "CRAN",
+      "Repository": "https://cloud.r-project.org",
       "description": {
         "Package": "duckdb",
         "Title": "DBI Package for the DuckDB Database Management System",
-        "Version": "1.2.1.9000",
+        "Version": "1.2.1",
         "Authors@R": "c(\n    person(\"Hannes\", \"Mühleisen\", , \"hannes@cwi.nl\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-8552-0029\")),\n    person(\"Mark\", \"Raasveldt\", , \"mark.raasveldt@cwi.nl\", role = \"aut\",\n           comment = c(ORCID = \"0000-0001-5005-6844\")),\n    person(\"Kirill\", \"Müller\", , \"kirill@cynkra.com\", role = \"cre\",\n           comment = c(ORCID = \"0000-0002-1416-3412\")),\n    person(\"Stichting DuckDB Foundation\", role = \"cph\"),\n    person(\"Apache Software Foundation\", role = \"cph\"),\n    person(\"PostgreSQL Global Development Group\", role = \"cph\"),\n    person(\"The Regents of the University of California\", role = \"cph\"),\n    person(\"Cameron Desrochers\", role = \"cph\"),\n    person(\"Victor Zverovich\", role = \"cph\"),\n    person(\"RAD Game Tools\", role = \"cph\"),\n    person(\"Valve Software\", role = \"cph\"),\n    person(\"Rich Geldreich\", role = \"cph\"),\n    person(\"Tenacious Software LLC\", role = \"cph\"),\n    person(\"The RE2 Authors\", role = \"cph\"),\n    person(\"Google Inc.\", role = \"cph\"),\n    person(\"Facebook Inc.\", role = \"cph\"),\n    person(\"Steven G. Johnson\", role = \"cph\"),\n    person(\"Jiahao Chen\", role = \"cph\"),\n    person(\"Tony Kelman\", role = \"cph\"),\n    person(\"Jonas Fonseca\", role = \"cph\"),\n    person(\"Lukas Fittl\", role = \"cph\"),\n    person(\"Salvatore Sanfilippo\", role = \"cph\"),\n    person(\"Art.sy, Inc.\", role = \"cph\"),\n    person(\"Oran Agra\", role = \"cph\"),\n    person(\"Redis Labs, Inc.\", role = \"cph\"),\n    person(\"Melissa O'Neill\", role = \"cph\"),\n    person(\"PCG Project contributors\", role = \"cph\")\n  )",
         "Description": "The DuckDB project is an embedded analytical data management\n    system with support for the Structured Query Language (SQL). This\n    package includes all of DuckDB and an R Database Interface (DBI)\n    connector.",
         "License": "MIT + file LICENSE",
@@ -628,25 +628,15 @@
         "Suggests": "adbcdrivermanager, arrow (>= 13.0.0), bit64, callr, clock,\nDBItest, dbplyr, dplyr, rlang, testthat, tibble, vctrs, withr",
         "Config/build/compilation-database": "true",
         "Encoding": "UTF-8",
-        "Roxygen": "list(markdown = TRUE)",
         "RoxygenNote": "7.3.2.9000",
         "SystemRequirements": "xz (for building from source)",
-        "RemoteType": "github",
-        "RemoteHost": "api.github.com",
-        "RemoteRepo": "duckdb-r",
-        "RemoteUsername": "duckdb",
-        "RemotePkgRef": "duckdb/duckdb-r",
-        "RemoteRef": "HEAD",
-        "RemoteSha": "1be77fe0b411884da52c81701f55d287e8041e92",
-        "GithubRepo": "duckdb-r",
-        "GithubUsername": "duckdb",
-        "GithubRef": "HEAD",
-        "GithubSHA1": "1be77fe0b411884da52c81701f55d287e8041e92",
         "NeedsCompilation": "yes",
-        "Packaged": "2025-03-27 22:02:21 UTC; drew",
+        "Packaged": "2025-03-14 07:05:03 UTC; kirill",
         "Author": "Hannes Mühleisen [aut] (<https://orcid.org/0000-0001-8552-0029>),\n  Mark Raasveldt [aut] (<https://orcid.org/0000-0001-5005-6844>),\n  Kirill Müller [cre] (<https://orcid.org/0000-0002-1416-3412>),\n  Stichting DuckDB Foundation [cph],\n  Apache Software Foundation [cph],\n  PostgreSQL Global Development Group [cph],\n  The Regents of the University of California [cph],\n  Cameron Desrochers [cph],\n  Victor Zverovich [cph],\n  RAD Game Tools [cph],\n  Valve Software [cph],\n  Rich Geldreich [cph],\n  Tenacious Software LLC [cph],\n  The RE2 Authors [cph],\n  Google Inc. [cph],\n  Facebook Inc. [cph],\n  Steven G. Johnson [cph],\n  Jiahao Chen [cph],\n  Tony Kelman [cph],\n  Jonas Fonseca [cph],\n  Lukas Fittl [cph],\n  Salvatore Sanfilippo [cph],\n  Art.sy, Inc. [cph],\n  Oran Agra [cph],\n  Redis Labs, Inc. [cph],\n  Melissa O'Neill [cph],\n  PCG Project contributors [cph]",
         "Maintainer": "Kirill Müller <kirill@cynkra.com>",
-        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2025-03-27 22:02:23 UTC; unix"
+        "Repository": "CRAN",
+        "Date/Publication": "2025-03-14 13:40:02 UTC",
+        "Built": "R 4.4.0; x86_64-pc-linux-gnu; 2025-04-28 19:12:57 UTC; unix"
       }
     },
     "ellmer": {
