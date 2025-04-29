@@ -13,7 +13,7 @@ Do not display your thinking.
 
 Columns with the words "position" and "overall_place" represent each runner's position or rank at each of the location columns.  For example, if the runner has a value of "16" at the "robinson_flat_position" then they are in 16th place overall in the race at that position.  If a runner has a value of "2" in the "overall_place" column then they finished the race in second place.
 
-The value "DNF" or "dnf" in the "time" column means that the runner did not succesfully complete the race.  To successfully complete the race, the runner must have a time value of less than 30 hours which is less than 30:00:00 and they must not have "DNF" or "dnf" in the "time" column.
+The value "DNF" or "dnf" in the "time" column means that the runner did not successfully complete the race.  To successfully complete the race, the runner must have a time value of less than 30 hours which is less than 30:00:00 and they must not have "DNF" or "dnf" in the "time" column.
 
 The race starts at "olympic_valley".  All "olympic_valley_time" values represent the start so they are in the format of "0:00:00" and all runners have the same position value of "1" at the start "olympic_valley_position".
 
@@ -22,3 +22,28 @@ Consider all text values to be case insensitive.  Force lower case on any text c
 If the "finish_time" column is 30:00:00 or greater then the runner did not officially finish the race. This is the same as a DNF in the "time" column and "no buckle" in the "buckle type" column
 
 If the "finish_time" column is null then the runner did not finish the race. This is the same as a DNF in the "time" column and "no buckle" in the "buckle type" column
+
+There are two aid stations (also called checkpoints) that are not in this data set. These two are called "Dardanelles" (which is also known as "Cal-1") and "Ford's Bar" (which is also known as "Cal-3") 
+
+The following list identifies the distance to and between aid stations, which are also called checkpoints, and these aid statoins are categorized as follows:
+"Checkpoint name",	"Miles from start",	"Kilometers from start",	"Miles to next checkpoint", "Kilometers to next checkpoint":
+"Olympic Valley",	0,	0,	10.3,	16.6
+"Lyon Ridge",	10.3,	16.6,	5.5,	8.8
+"Red Star Ridge",	15.8, 25.4, 8.6, 13.9
+"Duncan Canyon", 24.4, 39.3, 5.9,	9.5
+"Robinson Flat",	30.3,	48.8,	4.1,	6.6
+"Miller's Defeat",	34.4,	55.4,	3.6,	5.8
+"Dusty Corners",	38,	61.2,	5.3,	8.5
+"Last Chance",	43.3,	69.7,	4.5,	7.2
+"Devil's Thumb",	47.8,	76.9,	5.1,	8.2
+"El Dorado Creek",	52.9,	85.1,	2.8,	4.5
+"Michigan Bluff",	55.7,	89.6,	6.3,	10.2
+"Foresthill", 62, 99.8,	8.7, 14
+"Peachstone (Cal-2)",	70.7,	113.8,	7.3,	11.7
+"Rucky Chucky",	78,	125.5,	1.8,	2.9
+"Green Gate",	79.8,	128.4,	5.4,	8.7
+"Auburn Lake Trails",	85.2,	137.1,	5.5,	8.9
+"Quarry Road",	90.7,	146,	3.6,	5.8
+"Pointed Rocks",	94.3,	151.8,	4.6,	7.4
+"Robie Point",	98.9,	159.2,	1.3,	2.1
+"Placer High School",	100.2,	161.3,	0,	0
