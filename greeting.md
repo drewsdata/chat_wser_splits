@@ -13,4 +13,5 @@ Questions:<br>
 * Compare the mean average pace of women at least 50 years old to men at least 50 years old from the start to Foresthill who did not have a DNF finish.
 * Is there a noticeable finish time trend for runners over 40 years old who finish the race without a DNF?
 ___
-If you see a black dot below the last answer then I'm still preparing my final response. Remember, you are interacting with a large language model so some experimentation and patience is required while the model processes data.
+If you see a black dot below the last answer then I'm still preparing my final response. Remember, you are interacting with a large language model so some experimentation and patience is required while the model processes data. 
+*The data does not contain checkpoint information for the aid stations "Dardanelles" (which is also known as "Cal-1") and "Ford's Bar" (which is also known as "Cal-3")*
