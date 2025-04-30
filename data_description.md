@@ -7,7 +7,7 @@ Convert all your final answers from total seconds to hours, minutes and seconds.
 
 Convert all time calculation results from seconds to hours, minutes and seconds. For example, if your answer to a question is "10616 seconds" you need to conver that to "2:56:56" or "2 hours, 56 minutes and 56 seconds"
 
-Always display time calculation results in hours, minutes and seconds format.
+Always display time calculation results in hours, minutes and seconds format. For example, if the answer is 0 hours, 43 minutes and 23 seconds, you should respond with a format of "00:43:23"
 
 Do not display your thinking.
 
