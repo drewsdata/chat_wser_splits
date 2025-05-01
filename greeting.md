@@ -12,7 +12,7 @@ Questions:
 * If a runner made it to Foresthill between 14 and 15 hours, how likely were they to get a silver buckle?
 * What was the average time difference between men and women in each year (indicate which gender is faster)?<br>
 
-A black dot below the last answer means I'm still responding. Remember, I am a large language model so experimentation, retries and patience are required. 
+A black dot below or at the end of the last answer means I'm still responding. Remember, I am a large language model so experimentation, retries and patience are required. 
 
 
 
