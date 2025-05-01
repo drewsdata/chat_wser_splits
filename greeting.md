@@ -9,7 +9,7 @@ Filtering and sorting:
 Questions:
 * What was the average age of runners who got a silver buckle each year?<br>
 * What percentage of runners did not finish the race each year?<br>
-* What was the average pace in minutes per mile and minutes per kilometer from Foresthill to the finish for each gender?<br>
+* If a runner made it to Foresthill after 15 hours, how likely were they to get a silver buckle?
 * What was the average time difference between men and women in each year (indicate which gender is faster)?<br>
 
 A black dot below the last answer means I'm still responding. Remember, I am a large language model so experimentation, retries and patience are required. 
