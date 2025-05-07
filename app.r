@@ -58,7 +58,8 @@ wser_results <- read_csv(here("data","wser_split_data_2017_2024.csv")) %>%
       time == "DNF" ~ "no buckle",
       TRUE ~ "no buckle"
     )
-  ) 
+  ) %>% 
+  mutate(across(.cols = year, .fns = as.integer))
 
 wser_results <- convert_duration_columns(wser_results) 
 
@@ -75,8 +76,12 @@ querychat_config <- querychat_init(wser_results,
                                    greeting = readLines("greeting.md"),
                                    data_description = readLines("data_description.md"),
                                    create_chat_func = purrr::partial(ellmer::chat_gemini, 
-                                                                     model = "gemini-2.5-flash-preview-04-17"))
-                                                                     # model = "gemini-2.0-flash-001"))
+                                                                     # model = "gemini-2.5-flash-preview-04-17"))
+                                                                     # model = "gemini-2.5-pro-exp-03-25"))
+                                                                     model = "gemini-2.0-flash"))
+
+
+
 
 ui <- fluidPage(
   h1("Chat with Western States Endurance Run (",tags$a("WSER", href = "https://www.wser.org/",target = "_blank", rel = "noopener noreferrer"),
@@ -84,14 +89,14 @@ ui <- fluidPage(
   h5(
     "Underlying data is sourced from ",
     tags$a("here", href = "https://www.wser.org/splits/", target = "_blank", rel = "noopener noreferrer"),
-    " and relies on the work of many time keeping volunteers at WSER checkpoints. This dashboard leverages the remarkable open source work of the ", 
-    tags$a("Posit PBC organization", href = "https://posit.co/",target = "_blank", rel = "noopener noreferrer")," 
+    " and relies on the work of many time keeping volunteers at WSER checkpoints. This dashboard leverages the remarkable open source work of the ",
+    tags$a("Posit PBC organization", href = "https://posit.co/",target = "_blank", rel = "noopener noreferrer"),"
     and is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It can be accredited to \"Drew Coughlin\" using this ",
     tags$a("URL", href = "https://drewsdata.github.io/", target = "_blank", rel = "noopener noreferrer"),
     ".",
     align = "left"
   ),
-  
+
   tags$hr(style="border-color: #4682B4;"),
   
   tabPanel("Results",
