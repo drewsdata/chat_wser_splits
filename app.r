@@ -80,9 +80,6 @@ querychat_config <- querychat_init(wser_results,
                                                                      # model = "gemini-2.5-pro-exp-03-25"))
                                                                      model = "gemini-2.0-flash"))
 
-
-
-
 ui <- fluidPage(
   h1("Chat with Western States Endurance Run (",tags$a("WSER", href = "https://www.wser.org/",target = "_blank", rel = "noopener noreferrer"),
      " ) Data", align = "center"),
