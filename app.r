@@ -86,8 +86,8 @@ ui <- fluidPage(
   h5(
     "Underlying data is sourced from ",
     tags$a("here", href = "https://www.wser.org/splits/", target = "_blank", rel = "noopener noreferrer"),
-    " and relies on the work of many time keeping volunteers at WSER checkpoints. This dashboard leverages the remarkable open source work of the ",
-    tags$a("Posit PBC organization", href = "https://posit.co/",target = "_blank", rel = "noopener noreferrer"),"
+    " and relies on the work of many time keeping volunteers at WSER checkpoints. This dashboard leverages the remarkable open source work of ",
+    tags$a("Posit Software, PBC", href = "https://posit.co/",target = "_blank", rel = "noopener noreferrer"),"
     and is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It can be accredited to \"Drew Coughlin\" using this ",
     tags$a("URL", href = "https://drewsdata.github.io/", target = "_blank", rel = "noopener noreferrer"),
     ".",
