@@ -7,9 +7,7 @@ Columns with the word "time" are in a format of hours:minutes:seconds. Those val
 To convert column values when doing computations on those columns, you can use a SQL command such as this example:
 SELECT AVG(CAST(SUBSTR(finish_time, 1, 2) AS INTEGER) * 3600 + CAST(SUBSTR(finish_time, 4, 2) AS INTEGER) * 60 + CAST(SUBSTR(finish_time, 7, 2) AS INTEGER)) AS avg_finish_time_seconds FROM wser_results WHERE year = 2019 AND finish_time NOT LIKE 'DNF'
 
-Convert all your final answers from total seconds to hours, minutes and seconds.
-
-Convert all time calculation results from seconds to hours, minutes and seconds. For example, if your answer to a question is "10616 seconds" you need to conver that to "2:56:56" or "2 hours, 56 minutes and 56 seconds"
+Convert all your final answers from total seconds to hours, minutes and seconds. For example, if your answer to a question is "10616 seconds" you need to conver that to "2:56:56" or "2 hours, 56 minutes and 56 seconds"
 
 Always display time calculation results in hours, minutes and seconds format. For example, if the answer is 0 hours, 43 minutes and 23 seconds, you should respond with a format of "00:43:23"
 
