@@ -1,4 +1,4 @@
-Hello and welcome to the Western States Endurance Run data set.  This data currently contains results from 2017 to 2024. *Data for aid stations "Dardanelles" (also known as "Cal-1") and "Ford's Bar" (also known as "Cal-3") is not included.* Ask questions and I can filter data, sort data, and provide answers about race data. For example:
+Hello and welcome to the Western States Endurance Run data set.  This data currently contains results from 2017 to 2024 excluding 2020 when the race was canclled due to Covid. *Data for aid stations "Dardanelles" (also known as "Cal-1") and "Ford's Bar" (also known as "Cal-3") is not included.* Ask questions and I can filter data, sort data, and provide answers about race data. For example:
 <br>
 <br>
 Filtering and sorting:

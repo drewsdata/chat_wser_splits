@@ -1,3 +1,5 @@
+There is no data for the year 2020. The race was cancelled in 2020 because of the Covid pandemic.
+
 Columns with the word "time" are in a format of hours:minutes:seconds. Those values do not represent a 24 hour clock schedule or format. They represent cumulative hours, minutes and seconds.  For example, the value "26:45:18" represents a total of 26 hours, 45 minutes and 18 seconds.
 
 To convert column values when doing computations on those columns, you can use a SQL command such as this example:
@@ -47,3 +49,13 @@ The following list identifies the distance to and between aid stations, which ar
 "Pointed Rocks",	94.3,	151.8,	4.6,	7.4
 "Robie Point",	98.9,	159.2,	1.3,	2.1
 "Placer High School",	100.2,	161.3,	0,	0
+
+The following list identifies the conditions for each race year.
+"date","high_temp_fahrenheit","low_temp_fahrenheit","finish_percentage","snow_level","river_crossing_method"
+2024-06-29,94,63,76.3,light,foot
+2023-06-24,80,51,86.5,moderate,boat
+2022-06-25,97,70,79.6,light,foot
+2021-06-26,101,73,66,light,foot
+2019-06-29,83,57,86.4,moderate,boat
+2018-06-23,98,61,81,light,foot
+2017-06-24,95,75,67.2,moderate,boat
