@@ -1,5 +1,7 @@
 There is no data for the year 2020. The race was cancelled in 2020 because of the Covid pandemic.
 
+Temperature data is in the data description, not the data table
+
 Columns with the word "time" are in a format of hours:minutes:seconds. Those values do not represent a 24 hour clock schedule or format. They represent cumulative hours, minutes and seconds.  For example, the value "26:45:18" represents a total of 26 hours, 45 minutes and 18 seconds.
 
 To convert column values when doing computations on those columns, you can use a SQL command such as this example:
@@ -51,7 +53,7 @@ The following list identifies the distance to and between aid stations, which ar
 "Placer High School",	100.2,	161.3,	0,	0
 
 The following list identifies the conditions for each race year.
-"date","high_temp_fahrenheit","low_temp_fahrenheit","finish_percentage","snow_level","river_crossing_method":
+"date","high_temp_fahrenheit","low_temp_fahrenheit","finish_percentage","snow_level","river_crossing_method"
 2024-06-29,94,63,76.3,light,foot
 2023-06-24,80,51,86.5,moderate,boat
 2022-06-25,97,70,79.6,light,foot
