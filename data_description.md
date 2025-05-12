@@ -1,5 +1,9 @@
 There is no data for the year 2020. The race was cancelled in 2020 because of the Covid pandemic.
 
+If a time column is in the format 9:56:16 then treat that as HH:MM:SS format.  In this case, the value would be 09:56:16 which is 9 hours, 56 minutes, 16 seconds.
+
+Put a leading 0 if the time column starts with a single digit. All time columns are in HH:MM:SS format so pad with a leading zero.
+
 Temperature data is in the data description, not the data table
 
 Columns with the word "time" are in a format of hours:minutes:seconds. Those values do not represent a 24 hour clock schedule or format. They represent cumulative hours, minutes and seconds.  For example, the value "26:45:18" represents a total of 26 hours, 45 minutes and 18 seconds.
