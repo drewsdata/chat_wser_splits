@@ -84,23 +84,17 @@ ui <- page_fillable(
   
   card(
     full_screen = TRUE,
-    card_header(    height = "1%",
-                    h4("Chat with Western States Endurance Run (",tags$a("WSER", href = "https://www.wser.org/",target = "_blank", rel = "noopener noreferrer"),
-                       " ) Data", align = "center"),
-                    h6(
-                      "This dashboard leverages the remarkable open source work of ",
-                      tags$a("Posit Software, PBC", href = "https://posit.co/",target = "_blank", rel = "noopener noreferrer"),"
+    card_header(h4("Chat with Western States Endurance Run (",tags$a("WSER", href = "https://www.wser.org/",target = "_blank", rel = "noopener noreferrer")," ) Data", align = "center"),
+                h6("This dashboard leverages the remarkable open source work of ",tags$a("Posit Software, PBC", href = "https://posit.co/",target = "_blank", rel = "noopener noreferrer"),"
     and is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It can be accredited to \"Drew Coughlin\" using this ",
                       tags$a("URL", href = "https://drewsdata.github.io/", target = "_blank", rel = "noopener noreferrer"),
-                      ". Underlying data is sourced from ",
-                      tags$a("here", href = "https://www.wser.org/splits/", target = "_blank", rel = "noopener noreferrer"),
-                      " and relies on the work of many time keeping volunteers at WSER checkpoints.",
-                      align = "left"
-                    )),
+                      ". Underlying data is sourced from ",tags$a("here", href = "https://www.wser.org/splits/", target = "_blank", rel = "noopener noreferrer"),
+                      " and relies on the work of many time keeping volunteers at WSER checkpoints.",align = "left")
+                ),
     layout_sidebar(
       fillable = FALSE,
       
-      sidebar = querychat_sidebar("chat", width = "25%", height = "99%")
+      sidebar = querychat_sidebar("chat", width = "25%")
       ,
       DT::DTOutput("dt")
     )
