@@ -91,7 +91,9 @@ ui <- page_fillable(
                       " and relies on the work of many time keeping volunteers at WSER checkpoints.",align = "left")
                 ),
     layout_sidebar(
-      fillable = FALSE,
+      border = TRUE,
+      border_color = "#4682B4",
+      bg = "white",
       sidebar = querychat_sidebar("chat", width = "33%"),
       DT::DTOutput("dt")
     )
