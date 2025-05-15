@@ -78,7 +78,7 @@ querychat_config <- querychat_init(wser_results,
                                    create_chat_func = purrr::partial(ellmer::chat_gemini, 
                                                                      # model = "gemini-2.5-flash-preview-04-17"))
                                                                      # model = "gemini-2.5-pro-exp-03-25"))
-                                                                     model = "gemini-2.0-flash"))))
+                                                                     model = "gemini-2.0-flash"))
 
 ui <- page_fillable(
   card(
