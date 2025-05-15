@@ -77,11 +77,10 @@ querychat_config <- querychat_init(wser_results,
                                    data_description = readLines("data_description.md"),
                                    create_chat_func = purrr::partial(ellmer::chat_gemini, 
                                                                      model = "gemini-2.5-flash-preview-04-17"))
-# model = "gemini-2.5-pro-exp-03-25"))
-# model = "gemini-2.0-flash"))
+                                                                     # model = "gemini-2.5-pro-exp-03-25"))
+                                                                     # model = "gemini-2.0-flash"))))
 
 ui <- page_fillable(
-  
   card(
     full_screen = TRUE,
     card_header(h4("Chat with Western States Endurance Run (",tags$a("WSER", href = "https://www.wser.org/",target = "_blank", rel = "noopener noreferrer")," ) Data", align = "center"),
@@ -93,13 +92,10 @@ ui <- page_fillable(
                 ),
     layout_sidebar(
       fillable = FALSE,
-      
-      sidebar = querychat_sidebar("chat", width = "25%")
-      ,
+      sidebar = querychat_sidebar("chat", width = "25%"),
       DT::DTOutput("dt")
     )
   )
-  
 )
 
 server <- function(input, output, session) {
