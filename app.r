@@ -101,7 +101,7 @@ ui <- page_fillable(
 server <- function(input, output, session) {
   querychat <- querychat_server("chat", querychat_config)
   output$dt <- DT::renderDT({
-    DT::datatable(querychat$df())
+    DT::datatable(querychat$df(), rownames = FALSE)
   })
 }
 
