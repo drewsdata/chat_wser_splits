@@ -92,7 +92,7 @@ ui <- page_fillable(
                 ),
     layout_sidebar(
       fillable = FALSE,
-      sidebar = querychat_sidebar("chat", width = "25%"),
+      sidebar = querychat_sidebar("chat", width = "33%"),
       DT::DTOutput("dt")
     )
   )
