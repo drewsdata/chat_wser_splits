@@ -2,12 +2,10 @@ Hello and welcome to the Western States Endurance Run data set.  This data curre
 <br>
 <br>
 Filtering and sorting:
-* Show all the runners from California.<br>
-* List all runners without a DNF in order of finish time.<br>
-* Display only the top 10 runners for each gender in 2024.<br>
+* List all international runners without a DNF in order of finish time.<br>
+* Filter the data to display the fastest 3 runners for each year who earned a bronze buckle.<br>
 
 Questions:
-* What was the average age of runners who got a silver buckle each year?<br>
 * What percentage of runners did not finish the race each year?<br>
 * If a runner made it to Foresthill between 14 and 15 hours, how likely were they to get a silver buckle?
 * What was the average time difference between men and women in each year (indicate which gender is faster)?<br>
