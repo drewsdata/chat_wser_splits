@@ -76,9 +76,9 @@ querychat_config <- querychat_init(wser_results,
                                    greeting = readLines("greeting.md"),
                                    data_description = readLines("data_description.md"),
                                    create_chat_func = purrr::partial(ellmer::chat_gemini, 
-                                                                     model = "gemini-2.5-flash-preview-04-17"))
+                                                                     # model = "gemini-2.5-flash-preview-04-17"))
                                                                      # model = "gemini-2.5-pro-exp-03-25"))
-                                                                     # model = "gemini-2.0-flash"))
+                                                                     model = "gemini-2.0-flash"))
 
 ui <- page_fillable(
   card(
@@ -88,7 +88,7 @@ ui <- page_fillable(
     and is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It can be accredited to \"Drew Coughlin\" using this ",
                       tags$a("URL", href = "https://drewsdata.github.io/", target = "_blank", rel = "noopener noreferrer"),
                       ". Underlying data is sourced from ",tags$a("here", href = "https://www.wser.org/splits/", target = "_blank", rel = "noopener noreferrer"),
-                      " and relies on the work of many time keeping volunteers at WSER checkpoints.",align = "left")
+                      " and relies on the work of many time keeping volunteers at WSER checkpoints. The data set contains race years 2017 to 2024 except 2020 (Covid cancelleation). Aid stations 'Dardanelles' ('Cal-1') and 'Ford\'s Bar' ('Cal-3') are excluded.",align = "left")
                 ),
     layout_sidebar(
       border = TRUE,
