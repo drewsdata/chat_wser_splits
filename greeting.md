@@ -19,6 +19,7 @@
      <ul>
        <li>What was the average age of runners who got a silver buckle each year?</li>
        <li>If a runner made it to Foresthill between 14 and 15 hours, how likely were they to get a silver buckle?</li>
+       <li>For runners who finished and arrived at Foresthill between 17 and 18 hours, what was their average time at Robinson Flat?</li>
     </ul>
 
 <p style="font-size: 14px;">A black dot below or at the end of the last answer means I'm still responding. I am a large language model so experimentation, retries and patience are required.</p>
