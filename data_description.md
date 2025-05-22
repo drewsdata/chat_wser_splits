@@ -1,6 +1,10 @@
 There is no data for the year 2020. The race was cancelled in 2020 because of the Covid pandemic.
-All column names with "time" are character strings.
-Temperature data is in the data description, not the data table
+If a time column is in the format 9:56:16 then treat that as HH:MM:SS format.  In this case, the value would be 09:56:16 which is 9 hours, 56 minutes, 16 seconds.
+Pad a leading 0 if the time column starts with a single digit. All time columns are in HH:MM:SS format.
+Columns with the word "time" are in a format of hours:minutes:seconds. Those values do not represent a 24 hour clock schedule or format. They represent cumulative hours, minutes and seconds.  For example, the value "26:45:18" represents a total of 26 hours, 45 minutes and 18 seconds.
+To convert column values when doing computations on "time" columns, you can use a SQL command such as this example:
+SELECT AVG(CAST(SUBSTR(finish_time, 1, 2) AS INTEGER) * 3600 + CAST(SUBSTR(finish_time, 4, 2) AS INTEGER) * 60 + CAST(SUBSTR(finish_time, 7, 2) AS INTEGER)) AS avg_finish_time_seconds FROM wser_results WHERE year = 2019 AND finish_time NOT LIKE 'DNF'.
+Temperature data is in the data description, not the data table.
 Convert columns names with "time" into a string format representing hours:minutes:seconds. Those values do not represent a 24 hour clock format. They represent cumulative hours, minutes and seconds.  For example, the value "26:45:18" represents a total of 26 hours, 45 minutes and 18 seconds.
 To convert column values when doing computations on those columns, you can use a SQL command such as this example:
 Convert all your final answers from total seconds to hours, minutes and seconds. For example, if your answer to a question is "10616 seconds" you need to convert that to "2:56:56" or "2 hours, 56 minutes and 56 seconds"
