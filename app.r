@@ -70,6 +70,14 @@ wser_results <- wser_results %>%
     return(x)
   }))
 
+wser_results <- wser_results %>%
+  mutate(
+    across(
+      contains("time"),
+      ~ str_pad(.x, width = 8, side = "left", pad = "0")
+    )
+  )
+
 GOOGLE_API_KEY <- Sys.getenv("GOOGLE_API_KEY")
 
 querychat_config <- querychat_init(wser_results,
@@ -78,7 +86,7 @@ querychat_config <- querychat_init(wser_results,
                                    create_chat_func = purrr::partial(ellmer::chat_gemini, 
                                                                      # model = "gemini-2.5-flash-preview-04-17"))
                                                                      model = "gemini-2.5-flash-preview-05-20"))
-                                                                     # model = "gemini-2.0-flash"))
+# model = "gemini-2.0-flash"))
 
 ui <- page_fillable(
   card(
@@ -86,10 +94,10 @@ ui <- page_fillable(
     card_header(h4("Chat with Western States Endurance Run (",tags$a("WSER", href = "https://www.wser.org/",target = "_blank", rel = "noopener noreferrer")," ) Data", align = "center"),
                 h6("This dashboard leverages the remarkable open source work of ",tags$a("Posit Software, PBC", href = "https://posit.co/",target = "_blank", rel = "noopener noreferrer"),"
     and is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It can be accredited to \"Drew Coughlin\" using this ",
-                      tags$a("URL", href = "https://drewsdata.github.io/", target = "_blank", rel = "noopener noreferrer"),
-                      ". Underlying data is sourced from ",tags$a("here", href = "https://www.wser.org/splits/", target = "_blank", rel = "noopener noreferrer"),
-                      " and relies on the work of many time keeping volunteers at WSER checkpoints. The data set contains race years 2017 to 2024 except 2020 (Covid cancelleation). Aid stations 'Dardanelles' ('Cal-1') and 'Ford\'s Bar' ('Cal-3') are excluded.",align = "left")
-                ),
+                   tags$a("URL", href = "https://drewsdata.github.io/", target = "_blank", rel = "noopener noreferrer"),
+                   ". Underlying data is sourced from ",tags$a("here", href = "https://www.wser.org/splits/", target = "_blank", rel = "noopener noreferrer"),
+                   " and relies on the work of many time keeping volunteers at WSER checkpoints. The data set contains race years 2017 to 2024 except 2020 (Covid cancelleation). Aid stations 'Dardanelles' ('Cal-1') and 'Ford\'s Bar' ('Cal-3') are excluded.",align = "left")
+    ),
     layout_sidebar(
       border = TRUE,
       border_color = "#4682B4",
