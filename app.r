@@ -45,7 +45,7 @@ convert_duration_columns <- function(df) {
   return(df)
 }
 
-wser_results <- read_csv(here("data","wser_split_data_2017_2024.csv")) %>% 
+wser_results <- read_csv(here("data","wser_split_data_2017_2025.csv")) %>% 
   mutate(
     time = case_when(
       time == "dnf" ~ "DNF",
@@ -96,7 +96,7 @@ ui <- page_fillable(
     and is licensed under the Creative Commons Attribution-NonCommercial 4.0 International license. It can be accredited to \"Drew Coughlin\" using this ",
                    tags$a("URL", href = "https://drewsdata.github.io/", target = "_blank", rel = "noopener noreferrer"),
                    ". Underlying data is sourced from ",tags$a("here", href = "https://www.wser.org/splits/", target = "_blank", rel = "noopener noreferrer"),
-                   " and relies on the work of many time keeping volunteers at WSER checkpoints. The data set contains race years 2017 to 2024 except 2020 (Covid cancelleation). Aid stations 'Dardanelles' ('Cal-1') and 'Ford\'s Bar' ('Cal-3') are excluded.",align = "left")
+                   " and relies on the work of many time keeping volunteers at WSER checkpoints. The data set contains race years 2017 to 2025 except 2020 (Covid cancelleation). Aid stations 'Dardanelles' ('Cal-1') and 'Ford\'s Bar' ('Cal-3') are excluded.",align = "left")
     ),
     layout_sidebar(
       border = TRUE,

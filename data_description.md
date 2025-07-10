@@ -40,6 +40,7 @@ The following list identifies the distance to and between aid stations, which ar
 
 The following list identifies the conditions for each race year.
 "date","high_temp_fahrenheit","low_temp_fahrenheit","finish_percentage","snow_level","river_crossing_method"
+2024-06-28,95,69,76.3,light,foot
 2024-06-29,94,63,76.3,light,foot
 2023-06-24,80,51,86.5,moderate,boat
 2022-06-25,97,70,79.6,light,foot
