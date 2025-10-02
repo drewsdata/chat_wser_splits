@@ -85,8 +85,10 @@ querychat_config <- querychat_init(wser_results,
                                    data_description = readLines("data_description.md"),
                                    create_chat_func = purrr::partial(ellmer::chat_gemini, 
                                                                      # model = "gemini-2.5-flash-preview-04-17"))
-                                                                     # model = "gemini-2.5-flash-preview-05-20")),
-                                                                     model = "gemini-2.5-flash-preview-09-2025"))
+                                                                     # model = "gemini-2.5-flash-preview-05-20"))
+                                                                     # model = "gemini-2.5-flash-preview-09-2025"))
+                                                                     model = "gemini-flash-latest"))
+                                                                     
 
 ui <- page_fillable(
   card(
