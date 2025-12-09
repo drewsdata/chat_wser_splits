@@ -7,7 +7,7 @@
      </style>
      <ul>
        <li>Filter the data and show the fastest 3 runners for each year earning a bronze buckle.</li>
-       <li>List international runners without a DNF ordered by finish time.</li>
+       <li>List international runners (country other than USA) without a DNF ordered by finish time.</li>
      </ul>
      
 <p style="font-size: 14px;">Questions:</p>
