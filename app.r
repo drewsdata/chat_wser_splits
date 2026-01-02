@@ -5,6 +5,7 @@ library(shiny)
 library(bslib)
 library(querychat)
 library(stringr)
+library(ellmer)
 
 # Function to convert duration-style time columns
 convert_duration_columns <- function(df) {
@@ -80,15 +81,15 @@ wser_results <- wser_results %>%
 
 GOOGLE_API_KEY <- Sys.getenv("GOOGLE_API_KEY")
 
-querychat_config <- querychat_init(wser_results,
-                                   greeting = readLines("greeting.md"),
-                                   data_description = readLines("data_description.md"),
-                                   create_chat_func = purrr::partial(ellmer::chat_gemini, 
-                                                                     # model = "gemini-2.5-flash-preview-04-17"))
-                                                                     # model = "gemini-2.5-flash-preview-05-20"))
-                                                                     # model = "gemini-2.5-flash-preview-09-2025"))
-                                                                     model = "gemini-flash-latest"))
-                                                                     
+# Create QueryChat object with the new R6 API
+qc <- QueryChat$new(
+  data_source = wser_results,
+  table_name = "wser_results",
+  # greeting = paste(readLines("greeting.md"), collapse = "\n"),
+  greeting = "greeting.md",
+  data_description = paste(readLines("data_description.md"), collapse = "\n"),
+  client = ellmer::chat_google_gemini(model = "gemini-flash-latest")
+)
 
 ui <- page_fillable(
   card(
@@ -104,16 +105,17 @@ ui <- page_fillable(
       border = TRUE,
       border_color = "#4682B4",
       bg = "white",
-      sidebar = querychat_sidebar("chat", width = "33%"),
+      sidebar = qc$sidebar(width = "33%"),
       DT::DTOutput("dt")
     )
   )
 )
 
 server <- function(input, output, session) {
-  querychat <- querychat_server("chat", querychat_config)
+  qc_vals <- qc$server()
+  
   output$dt <- DT::renderDT({
-    DT::datatable(querychat$df(), rownames = FALSE)
+    DT::datatable(qc_vals$df(), rownames = FALSE)
   })
 }
 
