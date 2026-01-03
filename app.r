@@ -80,6 +80,7 @@ wser_results <- wser_results %>%
   )
 
 GOOGLE_API_KEY <- Sys.getenv("GOOGLE_API_KEY")
+OPENROUTER_API_KEY <- Sys.getenv("OpenRouter")
 
 # Create QueryChat object with the new R6 API
 qc <- QueryChat$new(
@@ -88,7 +89,8 @@ qc <- QueryChat$new(
   # greeting = paste(readLines("greeting.md"), collapse = "\n"),
   greeting = "greeting.md",
   data_description = paste(readLines("data_description.md"), collapse = "\n"),
-  client = ellmer::chat_google_gemini(model = "gemini-flash-latest")
+  # client = ellmer::chat_google_gemini(model = "gemini-flash-latest")
+  client = ellmer::chat_openrouter(model = "x-ai/grok-code-fast-1")
 )
 
 ui <- page_fillable(
